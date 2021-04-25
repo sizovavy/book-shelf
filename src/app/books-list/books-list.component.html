@@ -1,0 +1,7 @@
+<h3>Список книг:</h3>
+<ul>
+    <li *ngFor="let book of books$ | async">
+        <book-detail [book] = "book" ></book-detail>
+    </li>
+</ul>
+

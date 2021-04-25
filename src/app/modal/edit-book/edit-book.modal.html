@@ -1,0 +1,33 @@
+<div class="modal-header">
+    <h4 class="modal-title" id="modal-basic-title">Просто книга</h4>
+  </div>
+  
+    <form [formGroup]="profileForm" (ngSubmit)="submitForm()">
+        <div class="modal-body">
+        <div><label>
+          Автор:
+          <div><input type="text" formControlName="author"></div>
+        </label>
+    </div>
+      
+    <div><label>
+            Дата издания:
+            <div><input type="date" formControlName="publishDate"></div>
+          </label></div>
+
+          <div><label>
+            Название:
+            <div><input type="text" formControlName="name"></div>
+          </label></div>
+          <div><label>
+            Количество страниц:
+            <div><input type="number" formControlName="pageNumber"></div>
+          </label></div>
+      
+     
+  </div>
+  <div class="modal-footer">
+    <button type="submit" [disabled]="!profileForm.valid" class="btn btn-outline-dark">Ok</button>
+    <button type="button" class="btn btn-outline-dark" (click)="canceled()">Cancel</button>
+  </div>
+</form>
